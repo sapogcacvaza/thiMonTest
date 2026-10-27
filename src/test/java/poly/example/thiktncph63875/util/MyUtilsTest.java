@@ -8,18 +8,22 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class MyUtilsTest {
     MyUtils myUtils;
-    int [] arr;
 
     @BeforeEach
-    public void setUpBeforeAll() {
+    public void setUpBeforeEach() {
         myUtils = new MyUtils();
-        System.out.println("Set up before all is done!");
-        arr = new int[] {1,2,3,4,5};
     }
 
     @Test
-    @DisplayName("Tính tổng các phần tử mảng số nguyen!")
-    void tinhTongMangSoNguyen() {
-        assertEquals(15, myUtils.tinhTongMangSoNguyen(arr));
+    @DisplayName("Tinh tong so ky tu cua mang chuoi ")
+    void tinhTongSoKyTuCuaMangChuoi() {
+        String arr[] = new String[] {"Long", "Nam", "Cường"};
+        assertEquals(12, myUtils.tinhTongSoKyTuCuaMangChuoi(arr));
+    }
+
+    @Test
+    @DisplayName("Tinh tong so ky tu cua mang chuoi ")
+    void tinhTichCuaHaiSoNguyen() {
+        assertEquals(9, myUtils.tinhTichCuaHaiSoNguyen(2, -7));
     }
 }
