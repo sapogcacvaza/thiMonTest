@@ -1,28 +1,25 @@
 package poly.example.thiktncph63875.util;
 
-import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class MyUtilsTest {
-    static MyUtils myUtils;
+    MyUtils myUtils;
+    int [] arr;
 
-    @BeforeAll
-    static void setUpBeforeAll() {
-        System.out.println("Set up my utils");
+    @BeforeEach
+    public void setUpBeforeAll() {
         myUtils = new MyUtils();
-    }
-
-    @AfterAll
-    static void tearDownAfterAll() {
-        System.out.println("Set up after all");
-
+        System.out.println("Set up before all is done!");
+        arr = new int[] {1,2,3,4,5};
     }
 
     @Test
-    @DisplayName("Cộng hai số nguyên")
-    void add() {
-        Assertions.assertEquals(5, new MyUtils().add(2,3));
-        System.out.println("Done...");
+    @DisplayName("Tính tổng các phần tử mảng số nguyen!")
+    void tinhTongMangSoNguyen() {
+        assertEquals(15, myUtils.tinhTongMangSoNguyen(arr));
     }
 }
