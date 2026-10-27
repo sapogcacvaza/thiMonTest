@@ -1,15 +1,14 @@
 package poly.example.thiktncph63875.util;
 
 public class MyUtils {
-    public int tinhTongSoKyTuCuaMangChuoi(String [] arr) {
+    public int tinhTongCacSoChiaHetChoBa(int n) {
         int tong = 0;
-        for(int i = 0; i < arr.length; i++) {
-            tong += arr[i].length();
+        for (int i = 1; i <= n; i++) {
+            if(i%3 == 0) {
+                tong += i;
+            }
         }
-        return tong;
-    }
 
-    public int tinhTichCuaHaiSoNguyen(int a, int b) {
-        return a - b;
+        return tong;
     }
 }

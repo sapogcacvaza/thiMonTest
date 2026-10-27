@@ -15,15 +15,8 @@ class MyUtilsTest {
     }
 
     @Test
-    @DisplayName("Tinh tong so ky tu cua mang chuoi ")
-    void tinhTongSoKyTuCuaMangChuoi() {
-        String arr[] = new String[] {"Long", "Nam", "Cường"};
-        assertEquals(12, myUtils.tinhTongSoKyTuCuaMangChuoi(arr));
-    }
-
-    @Test
-    @DisplayName("Tinh tong so ky tu cua mang chuoi ")
-    void tinhTichCuaHaiSoNguyen() {
-        assertEquals(9, myUtils.tinhTichCuaHaiSoNguyen(2, -7));
+    @DisplayName("Tính tổng các số chia hết cho 3 từ 1 đến n")
+    void tinhTongCacSoChiaHetChoBa() {
+        assertEquals(9, myUtils.tinhTongCacSoChiaHetChoBa(7));
     }
 }
