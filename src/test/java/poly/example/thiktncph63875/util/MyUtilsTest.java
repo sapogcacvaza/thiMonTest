@@ -17,6 +17,6 @@ class MyUtilsTest {
     @Test
     @DisplayName("Tính tổng các số chia hết cho 3 từ 1 đến n")
     void tinhTongCacSoChiaHetChoBa() {
-        assertEquals(9, myUtils.tinhTongCacSoChiaHetChoBa(7));
+        assertEquals(18, myUtils.tinhTongCacSoChiaHetChoBa(10));
     }
 }
